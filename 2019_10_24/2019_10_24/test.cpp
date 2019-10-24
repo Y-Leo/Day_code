@@ -2,38 +2,37 @@
 using namespace std;
 #include<string>
 
-string test(string s,string tmps)
+char* deleteRepeatedChars(char* parr)
 {
-	if ( NULL == &s)
-	{
-		return s;
-	}
-	tmps += s[0];
+	if (NULL == parr || 1 == strlen(parr))
+		return parr;
+	const int tableSize = 256;
+	bool hashTable[tableSize];
+	memset(hashTable, 0, sizeof(hashTable));
 
-	string::size_type j;
-	for (string::size_type i = 1; i < s.size(); i++)
+	char* slow = parr;
+	char* fast = parr;
+	while (*fast != '\0')
 	{
-		for (j = 0; j < tmps.size(); ++j)
+		if (!hashTable[*fast])
 		{
-			if (tmps[j] == s[i])
-				break;
+			hashTable[*fast] = 1;
+			*slow = *fast;
+			slow++;
 		}
-		if (j == tmps.size())
-			tmps += s[i];
+		fast++;
 	}
-	return tmps;
+	*slow = '\0';
+	return parr;
 }
 
 
 int main()
 {
-	string s[128] = { "goole" };
-	string tmps("\0");
-	for (auto e : tmps)
-	{
-		cout << e;
-	}
-	cout << endl;
-	
+	char arr[] = "goole";
+	char *parr = arr;
+
+	parr = deleteRepeatedChars(parr);
+	cout << parr << endl;
 	return 0;
 }
