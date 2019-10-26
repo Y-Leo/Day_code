@@ -1,13 +1,117 @@
-﻿生成启动时间为 2019/10/25 9:22:05。
-项目“\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\2019_10_25\2019_10_25.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2019/10/25 23:34:19。
+项目“\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\2019_10_25\2019_10_25.vcxproj”在节点 2 上(Rebuild 个目标)。
 ClCompile:
   C:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
   test.cpp
-Link:
-  C:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\Debug\2019_10_25.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\Debug\2019_10_25.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\Debug\2019_10_25.lib" /MACHINE:X86 Debug\test.obj
-  2019_10_25.vcxproj -> \\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\Debug\2019_10_25.exe
-已完成生成项目“\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\2019_10_25\2019_10_25.vcxproj”(Build 个目标)的操作。
+c:\vs2013\vc\include\xutility(371): error C2825: '_Iter': 当后面跟“::”时必须为类或命名空间
+          c:\vs2013\vc\include\xutility(3168): 参见对正在编译的类 模板 实例化“std::iterator_traits<_BidIt>”的引用
+          with
+          [
+              _BidIt=size_t
+          ]
+          \\vmware-host\shared folders\桌面\git库\day_code\2019_10_25\2019_10_25\test.cpp(146): 参见对正在编译的函数 模板 实例化“void std::reverse<size_t>(_BidIt,_BidIt)”的引用
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(371): error C2039: “iterator_category”: 不是“`global namespace'”的成员
+c:\vs2013\vc\include\xutility(371): error C2146: 语法错误: 缺少“;”(在标识符“iterator_category”的前面)
+c:\vs2013\vc\include\xutility(371): error C2602: “std::iterator_traits<_BidIt>::iterator_category”不是“std::iterator_traits<_BidIt>”基类的成员
+          with
+          [
+              _BidIt=size_t
+          ]
+          c:\vs2013\vc\include\xutility(371) : 参见“std::iterator_traits<_BidIt>::iterator_category”的声明
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(371): error C2868: “std::iterator_traits<_BidIt>::iterator_category”: 非法的 using 声明语法；应输入限定名
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(372): error C2825: '_Iter': 当后面跟“::”时必须为类或命名空间
+c:\vs2013\vc\include\xutility(372): error C2039: “value_type”: 不是“`global namespace'”的成员
+c:\vs2013\vc\include\xutility(372): error C2146: 语法错误: 缺少“;”(在标识符“value_type”的前面)
+c:\vs2013\vc\include\xutility(372): error C2602: “std::iterator_traits<_BidIt>::value_type”不是“std::iterator_traits<_BidIt>”基类的成员
+          with
+          [
+              _BidIt=size_t
+          ]
+          c:\vs2013\vc\include\xutility(372) : 参见“std::iterator_traits<_BidIt>::value_type”的声明
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(372): error C2868: “std::iterator_traits<_BidIt>::value_type”: 非法的 using 声明语法；应输入限定名
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(373): error C2825: '_Iter': 当后面跟“::”时必须为类或命名空间
+c:\vs2013\vc\include\xutility(373): error C2039: “difference_type”: 不是“`global namespace'”的成员
+c:\vs2013\vc\include\xutility(373): error C2146: 语法错误: 缺少“;”(在标识符“difference_type”的前面)
+c:\vs2013\vc\include\xutility(373): error C2602: “std::iterator_traits<_BidIt>::difference_type”不是“std::iterator_traits<_BidIt>”基类的成员
+          with
+          [
+              _BidIt=size_t
+          ]
+          c:\vs2013\vc\include\xutility(373) : 参见“std::iterator_traits<_BidIt>::difference_type”的声明
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(373): error C2868: “std::iterator_traits<_BidIt>::difference_type”: 非法的 using 声明语法；应输入限定名
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(375): error C2825: '_Iter': 当后面跟“::”时必须为类或命名空间
+c:\vs2013\vc\include\xutility(375): error C2039: “pointer”: 不是“`global namespace'”的成员
+c:\vs2013\vc\include\xutility(375): error C2146: 语法错误: 缺少“;”(在标识符“pointer”的前面)
+c:\vs2013\vc\include\xutility(375): error C2602: “std::iterator_traits<_BidIt>::pointer”不是“std::iterator_traits<_BidIt>”基类的成员
+          with
+          [
+              _BidIt=size_t
+          ]
+          c:\vs2013\vc\include\xutility(375) : 参见“std::iterator_traits<_BidIt>::pointer”的声明
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(375): error C2868: “std::iterator_traits<_BidIt>::pointer”: 非法的 using 声明语法；应输入限定名
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(376): error C2825: '_Iter': 当后面跟“::”时必须为类或命名空间
+c:\vs2013\vc\include\xutility(376): error C2039: “reference”: 不是“`global namespace'”的成员
+c:\vs2013\vc\include\xutility(376): error C2146: 语法错误: 缺少“;”(在标识符“reference”的前面)
+c:\vs2013\vc\include\xutility(376): error C2602: “std::iterator_traits<_BidIt>::reference”不是“std::iterator_traits<_BidIt>”基类的成员
+          with
+          [
+              _BidIt=size_t
+          ]
+          c:\vs2013\vc\include\xutility(376) : 参见“std::iterator_traits<_BidIt>::reference”的声明
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(376): error C2868: “std::iterator_traits<_BidIt>::reference”: 非法的 using 声明语法；应输入限定名
+          with
+          [
+              _BidIt=size_t
+          ]
+c:\vs2013\vc\include\xutility(3168): error C2664: “void std::_Reverse<_Iter>(_BidIt,_BidIt,std::bidirectional_iterator_tag)”: 无法将参数 3 从“unsigned int”转换为“std::bidirectional_iterator_tag”
+          with
+          [
+              _Iter=size_t
+  ,            _BidIt=size_t
+          ]
+          无构造函数可以接受源类型，或构造函数重载决策不明确
+已完成生成项目“\\vmware-host\Shared Folders\桌面\git库\Day_code\2019_10_25\2019_10_25\2019_10_25.vcxproj”(Rebuild 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:02.76
+已用时间 00:00:05.42
