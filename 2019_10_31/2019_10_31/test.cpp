@@ -170,7 +170,8 @@ private:
 
 int main()
 {
+	lxy::String s;
 
-
+	s.Empty();
 	return 0;
 }
