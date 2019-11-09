@@ -31,6 +31,7 @@ int main()
 }
 #endif
 
+#if 0
 //2. 标题:删除公共字符 | 时间限制 : 1秒 | 内存限制 : 32768K 
 //输入两个字符串，从第一字符串中删除第二个字符串中所有的字符。
 //例如，输入”They are students.”和”aeiou”，则删除之后的第一个字符串变成”Thy r stdnts.”
@@ -66,3 +67,95 @@ int main() {
 			cout << ret << endl;
 		return 0;
 	}
+
+#endif
+
+#if 0
+//3、计算糖果
+//知道A-B B-C A+B B+C，求ABC，若有则返回A、B、C，若没有则返回NO
+
+//思路;很暴力的解法，先用数学式子表示出ABC，解出之后再回去验证结果是否正确
+#include<iostream>
+using namespace std;
+#include<vector>
+
+void CountCandy(vector<int> v)
+{
+	v.resize(4, 0);
+	int A, B, C;
+	while (cin >> v[0] >> v[1] >> v[2] >> v[3])
+	{
+		A = (v[0] + v[2]) / 2;
+		B = (v[1] + v[3]) / 2;
+		C = v[3] - B;
+		if ((A - B == v[0]) && (B - C == v[1]) && (A + B == v[2]) && (B + C == v[3]))
+		{
+			cout << A << " " << B << " " << C << endl;
+		}
+		else
+		{
+			cout << "No" << endl;
+		}
+	}
+}
+
+int main()
+{
+	vector<int> v;
+	CountCandy(v);
+	return 0;
+}
+#endif
+
+#if 1
+//4、进制转换
+//输入一个十进制数，完成到任意进制之间的转换
+
+//思路：
+//1、十进制转其他进制：除权取余倒着读
+//2、M不断处N直到M为零，取余数对应保存到s里，最后逆置s输出
+//3、注意几种情况：
+//                  1>负数，先转为正数，最后再补上‘-’
+//                  2>余数超过9，直接创建ss，来对应保存，如10对应保存为A
+
+#include<iostream>
+using namespace std;
+#include<string>
+#include<algorithm>
+
+string Transformation(int M, int N)
+{
+	bool flag = false;//若M<0特殊化处理
+	string s;
+	string ss = "0123456789ABCDEF";  //为了保存余数超过9的情况
+	if (M<0)
+	{
+		M = 0 - M;
+		flag = true;
+	}
+	while (M)
+	{
+		s += ss[M%N];
+		M /= N;
+	}
+	if (flag)
+	{
+		s += '-';
+	}
+	reverse(s.begin(), s.end());
+	return s;
+}
+
+int main()
+{
+	int M;
+	int N;
+	while (cin >> M >> N)
+	{
+		cout << Transformation(M, N) << endl;
+	}
+	return 0;
+}
+
+
+#endif
