@@ -47,6 +47,66 @@ int main()
 }
 #endif
 
+#if 1
+//参数解析
+#include<iostream>
+using namespace std;
+#include<string>
+#include<vector>
+
+void SeparateStr(string& s)
+{
+	if (s.empty())
+		return;
+	vector<string> v;
+	string tmp;
+	for (int i = 0; i < s.size(); ++i)
+	{
+		if (s[i] == '\"')
+		{
+			i++;
+			while (s[i] != '\"')
+			{
+				tmp += s[i];
+				i++;
+			}
+			v.push_back(tmp);
+			tmp.clear();
+		}
+		i++;
+		if (s[i] != ' ')
+			tmp += s[i];
+		else if (s[i] == ' ' && !tmp.empty())
+		{
+			v.push_back(tmp);
+			tmp.clear();
+		}
+	}
+	if (!tmp.empty())
+	{
+		v.push_back(tmp);
+		tmp.clear();
+	}
+	cout << v.size() << endl;
+	if (!v.empty())
+	{
+		for (int i = 0; i < v.size(); ++i)
+			cout << v[i] << endl;
+	}
+}
+
+int main()
+{
+	string s;
+	while (getline(cin, s))
+	{
+		SeparateStr(s);
+	}
+	return 0;
+}
+#endif
+#if 0
+
 //跳石板
 #include<iostream>
 using namespace std;
@@ -83,3 +143,4 @@ int main()
 			cout << v[m] << endl;
 	}
 }
+#endif
