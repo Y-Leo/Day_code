@@ -44,6 +44,8 @@ public:
 
 #endif
 
+#if 0
+
 #include<iostream>
 using namespace std;
 #include<list>
@@ -108,3 +110,6 @@ public:
 		return slow;
 	}
 };
+
+#endif
+
