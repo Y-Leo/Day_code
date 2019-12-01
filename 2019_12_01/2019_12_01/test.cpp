@@ -70,7 +70,7 @@ int Levenshtein(string s1, string s2)
 		return count;
 	}
 }
-
+/*
 int main()
 {
 	string s1, s2;
@@ -80,4 +80,5 @@ int main()
 	}
 	return 0;
 }
+*/
 
