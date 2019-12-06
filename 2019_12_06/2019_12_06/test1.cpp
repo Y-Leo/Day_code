@@ -1,5 +1,6 @@
-//字符串通配符
 
+#if 0
+//字符串通配符
 #include<iostream>
 using namespace std;
 #include<string>
@@ -30,6 +31,38 @@ int main()
 			cout << "true" << endl;
 		else
 			cout << "false" << endl;
+	}
+	return 0;
+}
+#endif
+
+//连续最大和
+/*
+给一个数组；
+例：-1 2 4 -1 6 -2
+输出：2+4+（-1）+6=11
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+	int n;
+	while (cin >> n) {
+		vector<int> arr(n, 0);
+		for (int i = 0; i < n; ++i) {
+			cin >> arr[i];
+		}
+		int max = arr[0];
+		for (int i = 1; i < n; ++i) {
+			if (arr[i - 1] > 0) {
+				arr[i] += arr[i - 1];
+			}
+			if (max < arr[i])
+				max = arr[i];
+		}
+		cout << max << endl;
 	}
 	return 0;
 }
